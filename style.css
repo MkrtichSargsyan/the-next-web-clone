@@ -1,10 +1,18 @@
-/* Reset */
+/* 
+    ==============================================
+
+                ****** RESET ******
+
+    ==============================================
+*/
 
 *,
 *::before,
 *::after {
     margin: 0;
     padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -12,19 +20,29 @@ ul {
     list-style: none;
 }
 
+a {
+    text-decoration: none;
+    color: white;
+}
 
-/* Global */
+/* 
+    ==============================================
 
+                ****** GLOBAL ******
+
+    ==============================================
+*/
 
 body {
     margin: 0 auto;
-    font-family: serif;
+    font-family: sans-serif;
     color: black;
     font-size: 14px;
     width: 100%;
     max-width: 1440px;
     background-color: #f0f0f0;
 }
+
 
 /* Header */
 
@@ -51,6 +69,10 @@ header .header-bottom-nav {
     color: #aaa;
 }
 
+header .header-top-nav .top-left-items :first-child {
+    color: white;
+}
+
 
 header .header-top-nav .top-left-items *:not(:first-child),
 header .header-bottom-nav .bottom-left-items *:not(:first-child) {
@@ -61,14 +83,14 @@ header .header-top-nav .top-right-items *:not(:last-child) {
     margin-right: 12px;
 }
 
-header .header-bottom-nav .search-icon-wrapper{
+header .header-bottom-nav .search-icon-wrapper {
     border-left: 1px solid #ccc;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     padding-left: 20px;
-    
+
 }
 
 header nav ul {
@@ -78,30 +100,113 @@ header nav ul {
 
 /* main part */
 
-/* Showcase */
+main {
+    padding: 10px;
+}
+
+/* 
+    ==============================================
+
+                ****** SHOWCASE ******
+
+    ==============================================
+*/
 
 .showcase {
+    color: white;
+    font-size: 14px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(480px, 3fr));
     gap: 10px;
-    grid-area: "b a a";
-    
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        "showcase-main showcase-main showcase-item1"
+        "showcase-main showcase-main showcase-item2";
 }
+
+.showcase .showcase-main .showcase-main-bottom,
+.showcase-item1 .showcase-item1-bottom,
+.showcase-item2 .showcase-item2-bottom {
+    display: flex;
+}
+
+.showcase-main .showcase-main-bottom li:not(:last-child),
+.showcase-item1 .showcase-item1-bottom li:not(:last-child),
+.showcase-item2 .showcase-item2-bottom li:not(:last-child) {
+    margin-right: 10px;
+}
+
+.showcase .showcase-item1,
+.showcase-item2 {
+    padding: 60px 16px 20px;
+}
+
+.showcase .showcase-item1 h2,
+.showcase-item2 h2 {
+    font-size: 26px;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+/* showcase main */
 
 .showcase-main {
-    grid-area: a;
-    background-color: red;
-    min-height: 200px;
-    grid-row: 2 span;
-    height: 100px;
+    grid-area: showcase-main;
+    padding: 20px 16px;
+    background: linear-gradient(337deg, rgba(0, 0, 0, 0.9) 30%,
+            rgba(220, 20, 20, 0.6) 50%), url(assets/images/showcase-images/Google-Nest-Netflix-796x417.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.showcase-item {
-    grid-area: b;
-    background-color: blue;
-    grid-column: 1 span;
-    height: 100px;
-    
-
-    
+.showcase-main-top {
+    display: flex;
+    justify-content: space-between;
 }
+
+.showcase-main .showcase-logo img {
+    width: 500px;
+    margin-bottom: 100px;
+}
+
+.showcase-main h1 {
+    font-size: 48px;
+    line-height: 1;
+    font-weight: bold;
+    max-width: 750px;
+    margin: 10px 0;
+}
+
+/* showcase item 1 */
+
+.showcase .showcase-item1 {
+    grid-area: showcase-item1;
+    background: linear-gradient(337deg, rgba(0, 0, 0, 0.9) 30%,
+            rgba(17, 8, 8, 0.6) 50%), url(assets/images/showcase-images/robinhoodkanye-796x448.jpg);
+    background-size: cover;
+}
+
+/* showcase item 2 */
+
+.showcase .showcase-item2 {
+    grid-area: showcase-item2;
+    background: linear-gradient(337deg, rgba(0, 0, 0, 0.9) 30%,
+            rgba(17, 8, 8, 0.6) 50%), url(assets/images/showcase-images/slack-ram-memory-faster-performance-desktop-796x450.jpg);
+    background-size: cover;
+}
+
+
+/* @media (max-width: 1100px) {}
+
+@media(max-width: 1025px) {} */
+
+/* @media(max-width: 770px) {
+
+    .showcase {
+
+        grid-template-areas:
+            "showcase-main"
+            "showcase-item1"
+            "showcase-item2";
+    }
+} */
+
