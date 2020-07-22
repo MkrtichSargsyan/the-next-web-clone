@@ -1,3 +1,77 @@
-body{
-    background-color: red;
+/* Reset */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+ul {
+    list-style: none;
+}
+
+
+/* Global */
+
+
+body {
+    margin: 0 auto;
+    font-family: serif;
+    color: black;
+    font-size: 14px;
+    width: 100%;
+    max-width: 1440px;
+}
+
+/* Header */
+
+header nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header .header-top-nav {
+    background-color: black;
+    height: 30px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+header .header-bottom-nav {
+    background-color: #fff;
+    font-size: 18px;
+    height: 48px;
+    color: #aaa;
+    border-bottom: 1px solid black;
+}
+
+
+header .header-top-nav .top-left-items *:not(:first-child),
+header .header-bottom-nav .bottom-left-items *:not(:first-child) {
+    margin-left: 12px;
+}
+
+header .header-top-nav .top-right-items *:not(:last-child) {
+    margin-right: 12px;
+}
+
+header .header-bottom-nav .search-icon-wrapper{
+    border-left: 1px solid #ccc;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+}
+
+header nav ul {
+    display: flex;
+    text-align: center;
+}
+
+/* main part */
