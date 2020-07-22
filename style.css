@@ -23,9 +23,11 @@ body {
     font-size: 14px;
     width: 100%;
     max-width: 1440px;
+    background-color: #f0f0f0;
 }
 
 /* Header */
+
 
 header nav {
     width: 100%;
@@ -47,7 +49,6 @@ header .header-bottom-nav {
     font-size: 18px;
     height: 48px;
     color: #aaa;
-    border-bottom: 1px solid black;
 }
 
 
@@ -67,6 +68,7 @@ header .header-bottom-nav .search-icon-wrapper{
     align-items: center;
     justify-content: center;
     padding-left: 20px;
+    
 }
 
 header nav ul {
@@ -75,3 +77,31 @@ header nav ul {
 }
 
 /* main part */
+
+/* Showcase */
+
+.showcase {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(480px, 3fr));
+    gap: 10px;
+    grid-area: "b a a";
+    
+}
+
+.showcase-main {
+    grid-area: a;
+    background-color: red;
+    min-height: 200px;
+    grid-row: 2 span;
+    height: 100px;
+}
+
+.showcase-item {
+    grid-area: b;
+    background-color: blue;
+    grid-column: 1 span;
+    height: 100px;
+    
+
+    
+}
