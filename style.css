@@ -225,7 +225,8 @@ main section {
 
 /* showcase item 1 */
 
-.showcase .showcase-item1 {
+.showcase .showcase-item1 ,
+.categories-article-header{
   grid-area: showcase-item1;
   background: linear-gradient(
       337deg,
@@ -414,6 +415,29 @@ span {
   height: 135px;
 }
 
+@media(max-width: 1024px) {
+    .grid-4-columns{
+        grid-template-columns: repeat(3, 1fr);
+    }   
+}
+
+
+@media (max-width: 768px){
+    .latest-news .grid-4-columns{
+        grid-template-columns: 1fr;
+    }
+
+    .latest-news .grid-4-columns article figure{
+        display: flex;
+    }
+
+    .latest-news .grid-4-columns article img{
+        width: 75px;
+        height: 75px;
+        margin-right: 10px;
+    }
+}
+
 /* 
     ==============================================
 
@@ -572,3 +596,50 @@ span {
 
 }
 
+/* 
+    ==============================================
+
+                ****** CATEGORIES  ******
+
+    ==============================================
+*/
+
+
+.categories-article{
+    border: 1px solid red;
+}
+
+.categories-article-header {
+    padding: 100px 10px 10px 10px;
+}
+
+
+.categories-article-header h2{
+    font-size: 18px;
+    color: white;
+    margin: 10px 0;
+}
+
+.categories-article-header p a{
+    color: #ccc;
+}
+
+.categories-article-middle .categories-article-image-wrapper{
+    width: 96px;
+    height: 96px;
+}
+
+.categories-article-middle .categories-article-image-wrapper img{
+    width: 100%;
+    /* height: 100%; */
+}
+
+.categories-article-middle{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(255,68,34,.06);
+}
+
+.categories-article-middle div:first-child{
+    padding: 10px 15px 0;
+}
