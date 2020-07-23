@@ -162,7 +162,7 @@ main section:not(.showcase) {
     "showcase-main showcase-main showcase-item1"
     "showcase-main showcase-main showcase-item2";
 
-height: 572px;
+  height: 572px;
 }
 
 .showcase .showcase-main .showcase-main-bottom,
@@ -666,22 +666,18 @@ span {
   line-height: 20px;
 }
 
-section:nth-child(5) article  figure  a img {
-    height: auto;
+section:nth-child(5) article figure a img {
+  height: auto;
 }
 
-@media  (max-width: 1024px) {
-
-    .grid-3-columns.categories-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
+@media (max-width: 1024px) {
+  .grid-3-columns.categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
-    
-    .grid-3-columns.categories-grid {
-        grid-template-columns: repeat(1, 1fr);
-    }
-
+  .grid-3-columns.categories-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
