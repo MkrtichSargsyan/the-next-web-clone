@@ -251,7 +251,7 @@ main section {
 
 /* @media (max-width: 1100px) {} */
 
-@media (max-width: 1170px) {
+@media (max-width: 1024px) {
   header {
     margin-left: 100px;
   }
@@ -303,7 +303,10 @@ main section {
   font-size: 18px;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (max-width: 1024px) {
+  .grid-4-columns.lastest-funding-grid > article:nth-child(4) {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
@@ -363,6 +366,8 @@ main section {
       "showcase-item1"
       "showcase-item2";
   }
+
+ 
 }
 
 /* 
@@ -417,26 +422,8 @@ span {
     ==============================================
 */
 
-.latest-funding-rounds-hader-wrapper {
-  display: flex;
-  justify-content: space-between;
-}
-
-.latest-funding-rounds-hader-wrapper ul {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.latest-funding-rounds-hader-wrapper ul li a {
-  color: #f42;
-  padding-right: 15px;
-  font-weight: 600;
-}
-
-.latest-funding-rounds-hader-wrapper ul li:not(:first-of-type) {
-  padding: 0 15px;
-  border-left: 1px solid #f42;
+.lastest-funding-grid {
+  grid-template-columns: repeat(auto-fit, minmax(228.5px, 1fr));
 }
 
 .article-top {
@@ -481,5 +468,107 @@ span {
 }
 
 .company-logo img {
-    height: 100%;
+  height: 100%;
 }
+
+.article-middle,
+.article-bottom {
+  padding: 25px;
+  background-color: #fffaf9 !important;
+  border-bottom: 2px solid #ffcec6;
+}
+
+.article-middle a,
+.article-bottom a {
+  color: #696767;
+  font-weight: lighter;
+}
+
+.article-middle p {
+  margin-bottom: 10px;
+}
+
+.article-bottom {
+  border-bottom: none;
+}
+
+.article-middle p i {
+  margin-right: 10px;
+}
+
+@media (min-width: 1024px) {
+  .latest-funding-rounds-hader-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .latest-funding-rounds-hader-wrapper ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .latest-funding-rounds-hader-wrapper ul li a {
+    color: #f42;
+    padding-right: 15px;
+    font-weight: 600;
+  }
+
+  .latest-funding-rounds-hader-wrapper ul li:not(:first-of-type) {
+    padding: 0 15px;
+    border-left: 1px solid #f42;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+
+    .latest-funding-rounds-hader-wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+      }
+    
+      .latest-funding-rounds-hader-wrapper ul {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+    
+      .latest-funding-rounds-hader-wrapper ul li a {
+        color: #f42;
+        padding-right: 15px;
+        font-weight: 600;
+      }
+    
+      .latest-funding-rounds-hader-wrapper ul li:not(:first-of-type) {
+        padding: 0 15px;
+        border-left: 1px solid #f42;
+      }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .latest-funding-rounds-hader-wrapper {
+        display: block;
+      }
+    
+      .latest-funding-rounds-hader-wrapper ul {
+        display: block;
+      }
+    
+      .latest-funding-rounds-hader-wrapper ul li {
+        border: none !important;
+        margin: 15px 0;
+        padding: 0 !important;
+      }
+    
+      .latest-funding-rounds-hader-wrapper ul li a {
+        font-weight: lighter !important;
+        color:  #f42
+      }
+
+}
+
