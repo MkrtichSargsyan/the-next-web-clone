@@ -86,6 +86,14 @@ header nav {
   padding: 0 20px;
 }
 
+.categories-article-middle-description * {
+  color: #f42;
+}
+
+.latest-news article * {
+  margin-bottom: 10px;
+}
+
 header .header-top-nav {
   background-color: black;
   height: 30px;
@@ -104,17 +112,10 @@ header .header-top-nav .top-left-items :first-child {
   color: white;
 }
 
-.categories-article-middle-description * {
-  color: #f42;
-}
-
-.latest-news article * {
-  margin-bottom: 10px;
-}
-
-header .header-top-nav .top-left-items *:not(:first-child),
-header .header-bottom-nav .bottom-left-items *:not(:first-child) {
-  margin-left: 12px;
+.article-middle a,
+.article-bottom a {
+  color: #696767;
+  font-weight: lighter;
 }
 
 .section-header a {
@@ -122,14 +123,22 @@ header .header-bottom-nav .bottom-left-items *:not(:first-child) {
   font-size: 28px;
 }
 
-.article-middle a,
-.article-bottom a {
-  color: #696767;
-  font-weight: lighter;
+.categories-article-header {
+  padding: 172px 10px 10px 10px;
 }
 
-.categories-article-middle-description a {
-  font-weight: bolder;
+.categories-article-header p a {
+  color: #ccc;
+}
+
+.categroies-article-bottom li a {
+  color: #5a5a5a;
+  line-height: 20px;
+}
+
+header .header-top-nav .top-left-items *:not(:first-child),
+header .header-bottom-nav .bottom-left-items *:not(:first-child) {
+  margin-left: 12px;
 }
 
 .bottom-left-items li a {
@@ -144,10 +153,6 @@ header .header-bottom-nav .bottom-left-items *:not(:first-child) {
 span {
   color: #aaa;
   font-size: 13px;
-}
-
-.categories-article-header p a {
-  color: #ccc;
 }
 
 .bottom-left-items li a:hover {
@@ -192,6 +197,28 @@ main section:not(.showcase) {
     ==============================================
 */
 
+.section-header img {
+  margin-left: 10px;
+  width: 15px;
+}
+
+.company-logo img {
+  height: 100%;
+}
+
+.latest-news article img {
+  width: 100%;
+  height: 135px;
+}
+
+footer .footer-bottom img {
+  height: 9px;
+}
+
+section:nth-child(5) article figure a img {
+  height: auto;
+}
+
 .showcase {
   margin-bottom: 110px;
   color: white;
@@ -205,10 +232,14 @@ main section:not(.showcase) {
   height: 572px;
 }
 
-.showcase .showcase-main .showcase-main-bottom,
-.showcase-item1 .showcase-item1-bottom,
-.showcase-item2 .showcase-item2-bottom {
-  display: flex;
+.categories-article-header h2 {
+  font-size: 18px;
+  color: white;
+  margin: 10px 0;
+}
+
+.article-middle p {
+  margin-bottom: 10px;
 }
 
 .categroies-article-bottom li {
@@ -226,14 +257,48 @@ footer .footer-top .social-icons li {
   background-color: #333;
 }
 
+.article-middle p i {
+  margin-right: 10px;
+}
+
 footer .footer-top ul li:not(:last-child) {
   margin-right: 15px;
+}
+
+footer .footer-top ul li i {
+  font-size: 20px;
+}
+
+footer .footer-bottom {
+  padding: 40px 0;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .footer-bottom p {
+  color: #aaa;
+  margin: 0 10px;
+}
+
+.showcase .showcase-main .showcase-main-bottom,
+.showcase-item1 .showcase-item1-bottom,
+.showcase-item2 .showcase-item2-bottom {
+  display: flex;
 }
 
 .showcase-main .showcase-main-bottom li:not(:last-child),
 .showcase-item1 .showcase-item1-bottom li:not(:last-child),
 .showcase-item2 .showcase-item2-bottom li:not(:last-child) {
   margin-right: 10px;
+}
+
+.showcase-item2 h2,
+.showcase .showcase-item1 h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 10px 0;
 }
 
 .showcase .showcase-item1,
@@ -244,29 +309,17 @@ footer .footer-top ul li:not(:last-child) {
   justify-content: flex-end;
 }
 
-.categories-article-header h2 {
-  font-size: 18px;
-  color: white;
-  margin: 10px 0;
-}
-
-.showcase-item2 h2,
-.showcase .showcase-item1 h2 {
-  font-size: 18px;
-  font-weight: 700;
-  margin: 10px 0;
-}
-
 /* showcase main */
 
 .showcase-main {
   grid-area: showcase-main;
   padding: 20px 16px;
   background:
-   linear-gradient(
-     337deg,
+    linear-gradient(
+      337deg,
       rgba(0, 0, 0, 0.9) 30%,
-      rgba(220, 20, 20, 0.6) 50%),
+      rgba(220, 20, 20, 0.6) 50%
+    ),
     url(assets/images/showcase-images/Google-Nest-Netflix-796x417.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -280,23 +333,6 @@ footer .footer-top ul li:not(:last-child) {
   justify-content: space-between;
 }
 
-.section-header img {
-  margin-left: 10px;
-  width: 15px;
-}
-
-.company-logo img {
-  height: 100%;
-}
-
-footer .footer-bottom img {
-  height: 9px;
-}
-
-section:nth-child(5) article figure a img {
-  height: auto;
-}
-
 .showcase-main .showcase-logo img {
   width: 500px;
   margin-bottom: 100px;
@@ -307,9 +343,12 @@ section:nth-child(5) article figure a img {
 .showcase .showcase-item1,
 .categories-article-header {
   grid-area: showcase-item1;
-  background: linear-gradient(337deg,
+  background:
+    linear-gradient(
+      337deg,
       rgba(0, 0, 0, 0.9) 30%,
-      rgba(17, 8, 8, 0.6) 50%),
+      rgba(17, 8, 8, 0.6) 50%
+    ),
     url(assets/images/showcase-images/robinhoodkanye-796x448.jpg);
   background-size: cover;
 }
@@ -318,9 +357,12 @@ section:nth-child(5) article figure a img {
 
 .showcase .showcase-item2 {
   grid-area: showcase-item2;
-  background: linear-gradient(337deg,
+  background:
+    linear-gradient(
+      337deg,
       rgba(0, 0, 0, 0.9) 30%,
-      rgba(17, 8, 8, 0.6) 50%),
+      rgba(17, 8, 8, 0.6) 50%
+    ),
     url(assets/images/showcase-images/slack-ram-memory-faster-performance-desktop-796x450.jpg);
   background-size: cover;
 }
@@ -333,9 +375,12 @@ section:nth-child(5) article figure a img {
   }
 
   .showcase-main {
-    background: linear-gradient(337deg,
+    background:
+      linear-gradient(
+        337deg,
         rgba(0, 0, 0, 0.9) 30%,
-        rgba(17, 8, 8, 0.6) 50%),
+        rgba(17, 8, 8, 0.6) 50%
+      ),
       url(assets/images/showcase-images/Google-Nest-Netflix-796x417.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -366,8 +411,7 @@ section:nth-child(5) article figure a img {
 }
 
 .showcase-main h1 {
-  font-size: 48px;
-  line-height: 1;
+  font-size: 40px;
   font-weight: bold;
   max-width: 750px;
   margin: 10px 0;
@@ -401,7 +445,7 @@ section:nth-child(5) article figure a img {
 
   .header-menu-icon i {
     padding: 16px;
-    border-left: 1px solid #eeeeee;
+    border-left: 1px solid #eee;
   }
 
   .header-menu-icon i:first-of-type {
@@ -455,11 +499,6 @@ section:nth-child(5) article figure a img {
 .latest-news h3 {
   font-size: 16px;
   color: black;
-}
-
-.latest-news article img {
-  width: 100%;
-  height: 135px;
 }
 
 @media (max-width: 1024px) {
@@ -544,16 +583,8 @@ section:nth-child(5) article figure a img {
   border-bottom: 2px solid #ffcec6;
 }
 
-.article-middle p {
-  margin-bottom: 10px;
-}
-
 .article-bottom {
   border-bottom: none;
-}
-
-.article-middle p i {
-  margin-right: 10px;
 }
 
 @media (min-width: 1024px) {
@@ -635,10 +666,6 @@ section:nth-child(5) article figure a img {
     ==============================================
 */
 
-.categories-article-header {
-  padding: 172px 10px 10px 10px;
-}
-
 .categories-article-middle {
   display: flex;
   justify-content: space-between;
@@ -669,11 +696,6 @@ section:nth-child(5) article figure a img {
   content: "• ";
   color: red;
   margin-right: 5px;
-}
-
-.categroies-article-bottom li a {
-  color: #5a5a5a;
-  line-height: 20px;
 }
 
 @media (max-width: 1024px) {
@@ -718,21 +740,4 @@ footer .footer-top ul:last-child a {
   font-size: 12px;
   text-transform: uppercase;
   font-weight: bold;
-}
-
-footer .footer-top ul li i {
-  font-size: 20px;
-}
-
-footer .footer-bottom {
-  padding: 40px 0;
-  background-color: #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-footer .footer-bottom p {
-  color: #aaa;
-  margin: 0 10px;
 }
