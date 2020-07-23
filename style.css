@@ -137,7 +137,7 @@ main {
   padding: 10px;
 }
 
-main section {
+main section:not(.showcase) {
   max-width: 1192px;
   padding: 0 20px;
   margin: 80px auto;
@@ -161,6 +161,8 @@ main section {
   grid-template-areas:
     "showcase-main showcase-main showcase-item1"
     "showcase-main showcase-main showcase-item2";
+
+height: 572px;
 }
 
 .showcase .showcase-main .showcase-main-bottom,
