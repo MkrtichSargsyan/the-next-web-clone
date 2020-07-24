@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "description": "## style command  npx stylelint \"**/*.{css,scss}\"",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "@chakra-ui/core": "^0.8.0",
+    "@emotion/core": "^10.0.28",
+    "@emotion/styled": "^10.0.27",
+    "emotion-theming": "^10.0.27"
+  },
   "devDependencies": {
     "hint": "^6.0.6",
     "stylelint": "^13.3.3",

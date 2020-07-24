@@ -649,7 +649,7 @@ footer .footer-bottom p {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .article-middle,
   .article-bottom {
     padding: 16px;
@@ -678,7 +678,6 @@ footer .footer-bottom p {
 
   .latest-funding-rounds-hader-wrapper ul li:not(:first-of-type) {
     padding: 0 15px;
-    border-left: 1px solid #f42;
   }
 }
 
@@ -750,7 +749,7 @@ footer .footer-bottom p {
   margin-right: 5px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .grid-3-columns.categories-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -794,7 +793,7 @@ footer .footer-bottom p {
   font-weight: bold;
 }
 
-@media (min-width: 1023px) and (max-width: 1025px) {
+@media (min-width: 1023px) and (max-width: 1023px) {
   .latest-funding-rounds .article {
     width: 253px;
   }
