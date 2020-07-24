@@ -180,15 +180,10 @@ span {
 }
 
 nav ul {
-  display: flex;
   text-align: center;
 }
 
 /* main part */
-
-main {
-  padding: 10px;
-}
 
 main section:not(.showcase) {
   max-width: 1192px;
@@ -381,8 +376,6 @@ footer .footer-bottom p {
     url(assets/images/showcase-images/slack-ram-memory-faster-performance-desktop-796x450.jpg);
   background-size: cover;
 }
-
-/* @media (max-width: 1100px) {} */
 
 @media (max-width: 1023px) {
   header {
@@ -649,11 +642,15 @@ footer .footer-bottom p {
   }
 }
 
-@media (max-width: 767px) and (max-width: 1023px) {
+@media (min-width: 767px) and (max-width: 1023px) {
   .article-middle,
   .article-bottom {
     padding: 16px;
     font-size: 12px;
+  }
+
+  ul.top-right-items {
+    display: none;
   }
 
   .latest-funding-rounds-hader-wrapper {
@@ -682,8 +679,13 @@ footer .footer-bottom p {
 }
 
 @media (max-width: 767px) {
+
   .grid-4-columns {
     grid-template-columns: 1fr;
+  }
+
+  body {
+    background-color: #fff;
   }
 
   .latest-funding-rounds-hader-wrapper {
@@ -759,6 +761,10 @@ footer .footer-bottom p {
   .grid-3-columns.categories-grid {
     grid-template-columns: repeat(1, 1fr);
   }
+
+  .footer-top ul li:not(:last-child) {
+    margin-right: 5px;
+}
 }
 
 /*
@@ -793,7 +799,7 @@ footer .footer-bottom p {
   font-weight: bold;
 }
 
-@media (min-width: 1023px) and (max-width: 1023px) {
+@media  (max-width: 1023px) {
   .latest-funding-rounds .article {
     width: 253px;
   }
