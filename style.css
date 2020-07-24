@@ -344,7 +344,7 @@ footer .footer-bottom p {
 }
 
 .showcase-main .showcase-logo img {
-  width: 500px;
+  width: 110%;
   margin-bottom: 100px;
 }
 
@@ -679,7 +679,6 @@ footer .footer-bottom p {
 }
 
 @media (max-width: 767px) {
-
   .grid-4-columns {
     grid-template-columns: 1fr;
   }
@@ -764,7 +763,7 @@ footer .footer-bottom p {
 
   .footer-top ul li:not(:last-child) {
     margin-right: 5px;
-}
+  }
 }
 
 /*
@@ -799,7 +798,7 @@ footer .footer-bottom p {
   font-weight: bold;
 }
 
-@media  (max-width: 1023px) {
+@media (max-width: 1023px) {
   .latest-funding-rounds .article {
     width: 253px;
   }
