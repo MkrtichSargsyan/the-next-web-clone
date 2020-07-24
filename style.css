@@ -384,7 +384,7 @@ footer .footer-bottom p {
 
 /* @media (max-width: 1100px) {} */
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   header {
     margin-left: 100px;
   }
@@ -445,7 +445,7 @@ footer .footer-bottom p {
   margin: 10px 0;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .grid-4-columns.lastest-funding-grid > article:nth-child(4) {
     display: none;
   }
@@ -537,13 +537,13 @@ footer .footer-bottom p {
   color: black;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .grid-4-columns {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .latest-news .grid-4-columns {
     grid-template-columns: 1fr;
   }
@@ -623,7 +623,7 @@ footer .footer-bottom p {
   border-bottom: none;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1023px) {
   .latest-funding-rounds-hader-wrapper {
     display: flex;
     justify-content: space-between;
@@ -649,7 +649,7 @@ footer .footer-bottom p {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (max-width: 767px) and (max-width: 1023px) {
   .article-middle,
   .article-bottom {
     padding: 16px;
@@ -681,7 +681,7 @@ footer .footer-bottom p {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .grid-4-columns {
     grid-template-columns: 1fr;
   }
@@ -755,7 +755,7 @@ footer .footer-bottom p {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .grid-3-columns.categories-grid {
     grid-template-columns: repeat(1, 1fr);
   }
