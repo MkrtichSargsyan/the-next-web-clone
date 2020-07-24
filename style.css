@@ -29,6 +29,7 @@ a:hover {
   color: #333 !important;
 }
 
+
 /*
     ==============================================
 
@@ -232,6 +233,7 @@ section:nth-child(5) article figure a img {
   height: 572px;
 }
 
+
 .categories-article-header h2 {
   font-size: 18px;
   color: white;
@@ -277,6 +279,16 @@ footer .footer-bottom {
   align-items: center;
 }
 
+#footer-bottom-hidden {
+  display: none;
+  flex-direction: column;
+  line-height: 16px;
+  padding: 40px 0;
+  background-color: #000;
+  justify-content: center;
+  align-items: center;
+}
+
 footer .footer-bottom p {
   color: #aaa;
   margin: 0 10px;
@@ -315,11 +327,9 @@ footer .footer-bottom p {
   grid-area: showcase-main;
   padding: 20px 16px;
   background:
-    linear-gradient(
-      337deg,
+    linear-gradient(337deg,
       rgba(0, 0, 0, 0.9) 30%,
-      rgba(220, 20, 20, 0.6) 50%
-    ),
+      rgba(220, 20, 20, 0.6) 50%),
     url(assets/images/showcase-images/Google-Nest-Netflix-796x417.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -327,6 +337,8 @@ footer .footer-bottom p {
   flex-direction: column;
   justify-content: space-between;
 }
+
+
 
 .showcase-main-top {
   display: flex;
@@ -344,11 +356,9 @@ footer .footer-bottom p {
 .categories-article-header {
   grid-area: showcase-item1;
   background:
-    linear-gradient(
-      337deg,
+    linear-gradient(337deg,
       rgba(0, 0, 0, 0.9) 30%,
-      rgba(17, 8, 8, 0.6) 50%
-    ),
+      rgba(17, 8, 8, 0.6) 50%),
     url(assets/images/showcase-images/robinhoodkanye-796x448.jpg);
   background-size: cover;
 }
@@ -358,11 +368,9 @@ footer .footer-bottom p {
 .showcase .showcase-item2 {
   grid-area: showcase-item2;
   background:
-    linear-gradient(
-      337deg,
+    linear-gradient(337deg,
       rgba(0, 0, 0, 0.9) 30%,
-      rgba(17, 8, 8, 0.6) 50%
-    ),
+      rgba(17, 8, 8, 0.6) 50%),
     url(assets/images/showcase-images/slack-ram-memory-faster-performance-desktop-796x450.jpg);
   background-size: cover;
 }
@@ -374,13 +382,15 @@ footer .footer-bottom p {
     margin-left: 100px;
   }
 
+  header nav li {
+    font-size: 13px;
+  }
+
   .showcase-main {
     background:
-      linear-gradient(
-        337deg,
+      linear-gradient(337deg,
         rgba(0, 0, 0, 0.9) 30%,
-        rgba(17, 8, 8, 0.6) 50%
-      ),
+        rgba(17, 8, 8, 0.6) 50%),
       url(assets/images/showcase-images/Google-Nest-Netflix-796x417.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -408,22 +418,33 @@ footer .footer-bottom p {
     width: auto;
     margin-bottom: 0;
   }
+
+  .showcase .showcase-main h1 {
+    font-size: 40px;
+  }
+
+
+  .showcase .showcase-item1 h2,
+  .showcase-item2 h2 {
+    font-size: 20px
+  }
+
 }
 
 .showcase-main h1 {
-  font-size: 40px;
+  font-size: 53px;
   font-weight: bold;
   max-width: 750px;
   margin: 10px 0;
 }
 
 @media (max-width: 1024px) {
-  .grid-4-columns.lastest-funding-grid > article:nth-child(4) {
+  .grid-4-columns.lastest-funding-grid>article:nth-child(4) {
     display: none;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   header nav {
     display: none;
   }
@@ -480,7 +501,19 @@ footer .footer-bottom p {
       "showcase-item1"
       "showcase-item2";
   }
+
+
+
+  footer .footer-bottom {
+    display: none;
+  }
+  
+  #footer-bottom-hidden {
+    display: flex;
+  }
+
 }
+
 
 /*
     ==============================================
@@ -532,7 +565,7 @@ footer .footer-bottom p {
 */
 
 .lastest-funding-grid {
-  grid-template-columns: repeat(auto-fit, minmax(228.5px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
 
 .article-top {
@@ -544,11 +577,11 @@ footer .footer-bottom p {
 }
 
 .article-details,
-.article-top > h4 {
+.article-top>h4 {
   padding: 10px 16px 10px 84px;
 }
 
-.article-top > h4 {
+.article-top>h4 {
   background-color: #f42;
   color: #fff;
 }
@@ -588,15 +621,19 @@ footer .footer-bottom p {
 }
 
 @media (min-width: 1024px) {
+
+
   .latest-funding-rounds-hader-wrapper {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
   .latest-funding-rounds-hader-wrapper ul {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    margin-bottom: 24px;
   }
 
   .latest-funding-rounds-hader-wrapper ul li a {
@@ -612,10 +649,18 @@ footer .footer-bottom p {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
+
+  .article-middle,
+  .article-bottom {
+    padding: 16px;
+    font-size: 12px;
+  }
+
   .latest-funding-rounds-hader-wrapper {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+    align-items: flex-start;
   }
 
   .latest-funding-rounds-hader-wrapper ul {
@@ -638,6 +683,12 @@ footer .footer-bottom p {
 }
 
 @media (max-width: 768px) {
+
+
+  .grid-4-columns {
+    grid-template-columns: 1fr;
+  }
+
   .latest-funding-rounds-hader-wrapper {
     display: block;
   }
@@ -655,6 +706,10 @@ footer .footer-bottom p {
   .latest-funding-rounds-hader-wrapper ul li a {
     font-weight: lighter !important;
     color: #f42;
+  }
+
+  .showcase .showcase-main h1 {
+    font-size: 24px;
   }
 }
 
@@ -740,4 +795,11 @@ footer .footer-top ul:last-child a {
   font-size: 12px;
   text-transform: uppercase;
   font-weight: bold;
+}
+
+
+@media (min-width: 1023px) and (max-width: 1025px) {
+  .latest-funding-rounds .article {
+    width: 253px;
+  }
 }
