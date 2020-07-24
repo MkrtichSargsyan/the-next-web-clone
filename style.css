@@ -6,6 +6,11 @@
     ==============================================
 */
 
+:root {
+  --color-red: #f42;
+  --bg-color-red: #f42;
+}
+
 *,
 *::before,
 *::after {
@@ -26,9 +31,8 @@ a {
 }
 
 a:hover {
-  color: #333 !important;
+  color: #333;
 }
-
 
 /*
     ==============================================
@@ -37,8 +41,6 @@ a:hover {
 
     ==============================================
 */
-
-/* grid classes */
 
 .grid-3-columns {
   display: grid;
@@ -55,6 +57,10 @@ a:hover {
 
 .hidden {
   display: none;
+}
+
+.flex {
+  display: flex;
 }
 
 body {
@@ -75,11 +81,11 @@ body {
     ==============================================
 */
 
-header .mobile-nav {
+.mobile-nav {
   display: none;
 }
 
-header nav {
+nav {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -88,28 +94,28 @@ header nav {
 }
 
 .categories-article-middle-description * {
-  color: #f42;
+  color: var(--color-red);
 }
 
 .latest-news article * {
   margin-bottom: 10px;
 }
 
-header .header-top-nav {
+.header-top-nav {
   background-color: black;
   height: 30px;
   font-size: 14px;
   color: rgba(255, 255, 255, 0.6);
 }
 
-header .header-bottom-nav {
+.header-bottom-nav {
   background-color: #fff;
   font-size: 18px;
   height: 48px;
   color: #aaa;
 }
 
-header .header-top-nav .top-left-items :first-child {
+.header-top-nav .top-left-items :first-child {
   color: white;
 }
 
@@ -120,7 +126,7 @@ header .header-top-nav .top-left-items :first-child {
 }
 
 .section-header a {
-  color: #f42;
+  color: var(--color-red);
   font-size: 28px;
 }
 
@@ -137,8 +143,8 @@ header .header-top-nav .top-left-items :first-child {
   line-height: 20px;
 }
 
-header .header-top-nav .top-left-items *:not(:first-child),
-header .header-bottom-nav .bottom-left-items *:not(:first-child) {
+.header-top-nav .top-left-items *:not(:first-child),
+.header-bottom-nav .bottom-left-items *:not(:first-child) {
   margin-left: 12px;
 }
 
@@ -160,11 +166,11 @@ span {
   color: #333;
 }
 
-header .header-top-nav .top-right-items *:not(:last-child) {
+.header-top-nav .top-right-items *:not(:last-child) {
   margin-right: 12px;
 }
 
-header .header-bottom-nav .search-icon-wrapper {
+.header-bottom-nav .search-icon-wrapper {
   border-left: 1px solid #ccc;
   height: 100%;
   display: flex;
@@ -173,7 +179,7 @@ header .header-bottom-nav .search-icon-wrapper {
   padding-left: 20px;
 }
 
-header nav ul {
+nav ul {
   display: flex;
   text-align: center;
 }
@@ -233,7 +239,6 @@ section:nth-child(5) article figure a img {
   height: 572px;
 }
 
-
 .categories-article-header h2 {
   font-size: 18px;
   color: white;
@@ -250,7 +255,7 @@ section:nth-child(5) article figure a img {
   display: flex;
 }
 
-footer .footer-top .social-icons li {
+.footer-top .social-icons li {
   padding: 10px;
   border-radius: 50%;
   display: flex;
@@ -263,18 +268,17 @@ footer .footer-top .social-icons li {
   margin-right: 10px;
 }
 
-footer .footer-top ul li:not(:last-child) {
+.footer-top ul li:not(:last-child) {
   margin-right: 15px;
 }
 
-footer .footer-top ul li i {
+.footer-top ul li i {
   font-size: 20px;
 }
 
-footer .footer-bottom {
+.footer-bottom {
   padding: 40px 0;
   background-color: #000;
-  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -327,18 +331,17 @@ footer .footer-bottom p {
   grid-area: showcase-main;
   padding: 20px 16px;
   background:
-    linear-gradient(337deg,
+    linear-gradient(
+      337deg,
       rgba(0, 0, 0, 0.9) 30%,
-      rgba(220, 20, 20, 0.6) 50%),
+      rgba(220, 20, 20, 0.6) 50%
+    ),
     url(assets/images/showcase-images/Google-Nest-Netflix-796x417.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-
-
 
 .showcase-main-top {
   display: flex;
@@ -356,9 +359,11 @@ footer .footer-bottom p {
 .categories-article-header {
   grid-area: showcase-item1;
   background:
-    linear-gradient(337deg,
+    linear-gradient(
+      337deg,
       rgba(0, 0, 0, 0.9) 30%,
-      rgba(17, 8, 8, 0.6) 50%),
+      rgba(17, 8, 8, 0.6) 50%
+    ),
     url(assets/images/showcase-images/robinhoodkanye-796x448.jpg);
   background-size: cover;
 }
@@ -368,9 +373,11 @@ footer .footer-bottom p {
 .showcase .showcase-item2 {
   grid-area: showcase-item2;
   background:
-    linear-gradient(337deg,
+    linear-gradient(
+      337deg,
       rgba(0, 0, 0, 0.9) 30%,
-      rgba(17, 8, 8, 0.6) 50%),
+      rgba(17, 8, 8, 0.6) 50%
+    ),
     url(assets/images/showcase-images/slack-ram-memory-faster-performance-desktop-796x450.jpg);
   background-size: cover;
 }
@@ -388,9 +395,11 @@ footer .footer-bottom p {
 
   .showcase-main {
     background:
-      linear-gradient(337deg,
+      linear-gradient(
+        337deg,
         rgba(0, 0, 0, 0.9) 30%,
-        rgba(17, 8, 8, 0.6) 50%),
+        rgba(17, 8, 8, 0.6) 50%
+      ),
       url(assets/images/showcase-images/Google-Nest-Netflix-796x417.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -423,12 +432,10 @@ footer .footer-bottom p {
     font-size: 40px;
   }
 
-
-  .showcase .showcase-item1 h2,
-  .showcase-item2 h2 {
-    font-size: 20px
+  .showcase-item2 h2,
+  .showcase .showcase-item1 h2 {
+    font-size: 20px;
   }
-
 }
 
 .showcase-main h1 {
@@ -439,7 +446,7 @@ footer .footer-bottom p {
 }
 
 @media (max-width: 1024px) {
-  .grid-4-columns.lastest-funding-grid>article:nth-child(4) {
+  .grid-4-columns.lastest-funding-grid > article:nth-child(4) {
     display: none;
   }
 }
@@ -458,7 +465,7 @@ footer .footer-bottom p {
     height: 100%;
   }
 
-  header .mobile-nav {
+  .mobile-nav {
     display: flex;
     justify-content: space-between;
     height: 48px;
@@ -474,16 +481,16 @@ footer .footer-bottom p {
   }
 
   .header-menu-icon i:last-of-type {
-    color: #f42;
+    color: var(--color-red);
   }
 
-  header .mobile-nav .header-logo {
+  .mobile-nav .header-logo {
     height: 100%;
     display: flex;
     align-items: center;
   }
 
-  header .mobile-nav .header-logo img {
+  .mobile-nav .header-logo img {
     background: linear-gradient(to bottom right, #c09, #f42 85%);
     padding: 16px 20px;
     font-size: 12px;
@@ -502,18 +509,14 @@ footer .footer-bottom p {
       "showcase-item2";
   }
 
-
-
-  footer .footer-bottom {
+  .footer-bottom {
     display: none;
   }
-  
+
   #footer-bottom-hidden {
     display: flex;
   }
-
 }
-
 
 /*
     ==============================================
@@ -577,12 +580,12 @@ footer .footer-bottom p {
 }
 
 .article-details,
-.article-top>h4 {
+.article-top > h4 {
   padding: 10px 16px 10px 84px;
 }
 
-.article-top>h4 {
-  background-color: #f42;
+.article-top > h4 {
+  background-color: var(--bg-color-red);
   color: #fff;
 }
 
@@ -612,7 +615,7 @@ footer .footer-bottom p {
 .article-middle,
 .article-bottom {
   padding: 25px;
-  background-color: #fffaf9 !important;
+  background-color: #fffaf9;
   border-bottom: 2px solid #ffcec6;
 }
 
@@ -621,8 +624,6 @@ footer .footer-bottom p {
 }
 
 @media (min-width: 1024px) {
-
-
   .latest-funding-rounds-hader-wrapper {
     display: flex;
     justify-content: space-between;
@@ -637,7 +638,7 @@ footer .footer-bottom p {
   }
 
   .latest-funding-rounds-hader-wrapper ul li a {
-    color: #f42;
+    color: var(--color-red);
     padding-right: 15px;
     font-weight: 600;
   }
@@ -649,7 +650,6 @@ footer .footer-bottom p {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-
   .article-middle,
   .article-bottom {
     padding: 16px;
@@ -671,7 +671,7 @@ footer .footer-bottom p {
   }
 
   .latest-funding-rounds-hader-wrapper ul li a {
-    color: #f42;
+    color: var(--color-red);
     padding-right: 15px;
     font-weight: 600;
   }
@@ -683,8 +683,6 @@ footer .footer-bottom p {
 }
 
 @media (max-width: 768px) {
-
-
   .grid-4-columns {
     grid-template-columns: 1fr;
   }
@@ -698,14 +696,13 @@ footer .footer-bottom p {
   }
 
   .latest-funding-rounds-hader-wrapper ul li {
-    border: none !important;
+    border: none;
     margin: 15px 0;
-    padding: 0 !important;
   }
 
   .latest-funding-rounds-hader-wrapper ul li a {
-    font-weight: lighter !important;
-    color: #f42;
+    font-weight: lighter;
+    color: var(--color-red);
   }
 
   .showcase .showcase-main h1 {
@@ -773,7 +770,7 @@ footer .footer-bottom p {
     ==============================================
 */
 
-footer .footer-top {
+.footer-top {
   background-color: #131313;
   display: flex;
   flex-direction: column;
@@ -782,21 +779,20 @@ footer .footer-top {
   padding: 42px 0;
 }
 
-footer .footer-top .social-icons {
+.footer-top .social-icons {
   margin-bottom: 21px;
 }
 
-footer .footer-top ul {
+.footer-top ul {
   display: flex;
 }
 
-footer .footer-top ul:last-child a {
+.footer-top ul:last-child a {
   color: #aaa;
   font-size: 12px;
   text-transform: uppercase;
   font-weight: bold;
 }
-
 
 @media (min-width: 1023px) and (max-width: 1025px) {
   .latest-funding-rounds .article {
