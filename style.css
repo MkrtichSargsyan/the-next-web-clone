@@ -1,3 +1,805 @@
-body{
-    background-color: red;
+/*
+    ==============================================
+
+                ****** RESET ******
+
+    ==============================================
+*/
+
+:root {
+  --color-red: #f42;
+  --bg-color-red: #f42;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: #333;
+}
+
+/*
+    ==============================================
+
+                ****** GLOBAL ******
+
+    ==============================================
+*/
+
+.grid-3-columns {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4-columns {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+}
+
+.hidden {
+  display: none;
+}
+
+.flex {
+  display: flex;
+}
+
+body {
+  margin: 0 auto;
+  font-family: sans-serif;
+  color: black;
+  font-size: 14px;
+  width: 100%;
+  max-width: 1440px;
+  background-color: #f0f0f0;
+}
+
+/*
+    ==============================================
+
+                ****** HEADER ******
+
+    ==============================================
+*/
+
+.mobile-nav {
+  display: none;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.categories-article-middle-description * {
+  color: var(--color-red);
+}
+
+.latest-news article * {
+  margin-bottom: 10px;
+}
+
+.header-top-nav {
+  background-color: black;
+  height: 30px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.header-bottom-nav {
+  background-color: #fff;
+  font-size: 18px;
+  height: 48px;
+  color: #aaa;
+}
+
+.header-top-nav .top-left-items :first-child {
+  color: white;
+}
+
+.article-middle a,
+.article-bottom a {
+  color: #696767;
+  font-weight: lighter;
+}
+
+.section-header a {
+  color: var(--color-red);
+  font-size: 28px;
+}
+
+.categories-article-header {
+  padding: 172px 10px 10px 10px;
+}
+
+.categories-article-header p a {
+  color: #ccc;
+}
+
+.categroies-article-bottom li a {
+  color: #5a5a5a;
+  line-height: 20px;
+}
+
+.header-top-nav .top-left-items *:not(:first-child),
+.header-bottom-nav .bottom-left-items *:not(:first-child) {
+  margin-left: 12px;
+}
+
+.bottom-left-items li a {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: small;
+  color: gray;
+}
+
+.latest-news p a,
+span {
+  color: #aaa;
+  font-size: 13px;
+}
+
+.bottom-left-items li a:hover {
+  color: #333;
+}
+
+.header-top-nav .top-right-items *:not(:last-child) {
+  margin-right: 12px;
+}
+
+.header-bottom-nav .search-icon-wrapper {
+  border-left: 1px solid #ccc;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 20px;
+}
+
+nav ul {
+  text-align: center;
+}
+
+/* main part */
+
+main section:not(.showcase) {
+  max-width: 1192px;
+  padding: 0 20px;
+  margin: 80px auto;
+}
+
+/*
+    ==============================================
+
+                ****** SHOWCASE ******
+
+    ==============================================
+*/
+
+.section-header img {
+  margin-left: 10px;
+  width: 15px;
+}
+
+.company-logo img {
+  height: 100%;
+}
+
+.latest-news article img {
+  width: 100%;
+  height: 135px;
+}
+
+footer .footer-bottom img {
+  height: 9px;
+}
+
+section:nth-child(5) article figure a img {
+  height: auto;
+}
+
+.showcase {
+  margin-bottom: 110px;
+  color: white;
+  font-size: 14px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "showcase-main showcase-main showcase-item1"
+    "showcase-main showcase-main showcase-item2";
+  height: 572px;
+}
+
+.categories-article-header h2 {
+  font-size: 18px;
+  color: white;
+  margin: 10px 0;
+}
+
+.article-middle p {
+  margin-bottom: 10px;
+}
+
+.categroies-article-bottom li {
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+}
+
+.footer-top .social-icons li {
+  padding: 10px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+}
+
+.article-middle p i {
+  margin-right: 10px;
+}
+
+.footer-top ul li:not(:last-child) {
+  margin-right: 15px;
+}
+
+.footer-top ul li i {
+  font-size: 20px;
+}
+
+.footer-bottom {
+  padding: 40px 0;
+  background-color: #000;
+  justify-content: center;
+  align-items: center;
+}
+
+#footer-bottom-hidden {
+  display: none;
+  flex-direction: column;
+  line-height: 16px;
+  padding: 40px 0;
+  background-color: #000;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .footer-bottom p {
+  color: #aaa;
+  margin: 0 10px;
+}
+
+.showcase .showcase-main .showcase-main-bottom,
+.showcase-item1 .showcase-item1-bottom,
+.showcase-item2 .showcase-item2-bottom {
+  display: flex;
+}
+
+.showcase-main .showcase-main-bottom li:not(:last-child),
+.showcase-item1 .showcase-item1-bottom li:not(:last-child),
+.showcase-item2 .showcase-item2-bottom li:not(:last-child) {
+  margin-right: 10px;
+}
+
+.showcase-item2 h2,
+.showcase .showcase-item1 h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.showcase .showcase-item1,
+.showcase-item2 {
+  padding: 60px 16px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/* showcase main */
+
+.showcase-main {
+  grid-area: showcase-main;
+  padding: 20px 16px;
+  background:
+    linear-gradient(
+      337deg,
+      rgba(0, 0, 0, 0.9) 30%,
+      rgba(220, 20, 20, 0.6) 50%
+    ),
+    url(assets/images/showcase-images/Google-Nest-Netflix-796x417.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.showcase-main-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.showcase-main .showcase-logo img {
+  width: 110%;
+  margin-bottom: 100px;
+}
+
+/* showcase item 1 */
+
+.showcase .showcase-item1,
+.categories-article-header {
+  grid-area: showcase-item1;
+  background:
+    linear-gradient(
+      337deg,
+      rgba(0, 0, 0, 0.9) 30%,
+      rgba(17, 8, 8, 0.6) 50%
+    ),
+    url(assets/images/showcase-images/robinhoodkanye-796x448.jpg);
+  background-size: cover;
+}
+
+/* showcase item 2 */
+
+.showcase .showcase-item2 {
+  grid-area: showcase-item2;
+  background:
+    linear-gradient(
+      337deg,
+      rgba(0, 0, 0, 0.9) 30%,
+      rgba(17, 8, 8, 0.6) 50%
+    ),
+    url(assets/images/showcase-images/slack-ram-memory-faster-performance-desktop-796x450.jpg);
+  background-size: cover;
+}
+
+@media (max-width: 1023px) {
+  header {
+    margin-left: 100px;
+  }
+
+  header nav li {
+    font-size: 13px;
+  }
+
+  .showcase-main {
+    background:
+      linear-gradient(
+        337deg,
+        rgba(0, 0, 0, 0.9) 30%,
+        rgba(17, 8, 8, 0.6) 50%
+      ),
+      url(assets/images/showcase-images/Google-Nest-Netflix-796x417.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .showcase-main-top {
+    visibility: hidden;
+  }
+
+  .showcase-main-top .showcase-logo {
+    position: absolute;
+    visibility: visible;
+    background: linear-gradient(to bottom right, #c09, #f42 85%);
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 80px;
+  }
+
+  .showcase-main-top .showcase-logo img {
+    height: 15px;
+    margin-top: 30px;
+    margin-left: 20px;
+    width: auto;
+    margin-bottom: 0;
+  }
+
+  .showcase .showcase-main h1 {
+    font-size: 40px;
+  }
+
+  .showcase-item2 h2,
+  .showcase .showcase-item1 h2 {
+    font-size: 20px;
+  }
+}
+
+.showcase-main h1 {
+  font-size: 53px;
+  font-weight: bold;
+  max-width: 750px;
+  margin: 10px 0;
+}
+
+@media (max-width: 1023px) {
+  .grid-4-columns.lastest-funding-grid > article:nth-child(4) {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  header nav {
+    display: none;
+  }
+
+  header {
+    margin-left: 0;
+    background-color: #fff;
+  }
+
+  .header-logo .showcase-logo {
+    height: 100%;
+  }
+
+  .mobile-nav {
+    display: flex;
+    justify-content: space-between;
+    height: 48px;
+  }
+
+  .header-menu-icon i {
+    padding: 16px;
+    border-left: 1px solid #eee;
+  }
+
+  .header-menu-icon i:first-of-type {
+    color: lightgray;
+  }
+
+  .header-menu-icon i:last-of-type {
+    color: var(--color-red);
+  }
+
+  .mobile-nav .header-logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .mobile-nav .header-logo img {
+    background: linear-gradient(to bottom right, #c09, #f42 85%);
+    padding: 16px 20px;
+    font-size: 12px;
+    height: 100%;
+  }
+
+  .showcase-main-top .showcase-logo {
+    display: none;
+  }
+
+  .showcase {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "showcase-main"
+      "showcase-item1"
+      "showcase-item2";
+  }
+
+  .footer-bottom {
+    display: none;
+  }
+
+  #footer-bottom-hidden {
+    display: flex;
+  }
+}
+
+/*
+    ==============================================
+
+                ****** LATEST NEWS ******
+
+    ==============================================
+*/
+
+.section-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.latest-news h3 {
+  font-size: 16px;
+  color: black;
+}
+
+@media (max-width: 1023px) {
+  .grid-4-columns {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .latest-news .grid-4-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .latest-news .grid-4-columns article figure {
+    display: flex;
+  }
+
+  .latest-news .grid-4-columns article img {
+    width: 75px;
+    height: 75px;
+    margin-right: 10px;
+  }
+}
+
+/*
+    ==============================================
+
+                ****** LATEST FUND  ******
+
+    ==============================================
+*/
+
+.lastest-funding-grid {
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.article-top {
+  position: relative;
+}
+
+.article-details {
+  background-color: #ff442214;
+}
+
+.article-details,
+.article-top > h4 {
+  padding: 10px 16px 10px 84px;
+}
+
+.article-top > h4 {
+  background-color: var(--bg-color-red);
+  color: #fff;
+}
+
+.article-details h4 {
+  font-weight: bolder;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: large;
+}
+
+.article-details h5 {
+  font-weight: lighter;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.company-logo {
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  background-color: white;
+  left: 10px;
+  top: 10px;
+}
+
+.article-middle,
+.article-bottom {
+  padding: 25px;
+  background-color: #fffaf9;
+  border-bottom: 2px solid #ffcec6;
+}
+
+.article-bottom {
+  border-bottom: none;
+}
+
+@media (min-width: 1023px) {
+  .latest-funding-rounds-hader-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .latest-funding-rounds-hader-wrapper ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  .latest-funding-rounds-hader-wrapper ul li a {
+    color: var(--color-red);
+    padding-right: 15px;
+    font-weight: 600;
+  }
+
+  .latest-funding-rounds-hader-wrapper ul li:not(:first-of-type) {
+    padding: 0 15px;
+    border-left: 1px solid #f42;
+  }
+}
+
+@media (min-width: 767px) and (max-width: 1023px) {
+  .article-middle,
+  .article-bottom {
+    padding: 16px;
+    font-size: 12px;
+  }
+
+  ul.top-right-items {
+    display: none;
+  }
+
+  .latest-funding-rounds-hader-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .latest-funding-rounds-hader-wrapper ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  .latest-funding-rounds-hader-wrapper ul li a {
+    color: var(--color-red);
+    padding-right: 15px;
+    font-weight: 600;
+  }
+
+  .latest-funding-rounds-hader-wrapper ul li:not(:first-of-type) {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  .grid-4-columns {
+    grid-template-columns: 1fr;
+  }
+
+  body {
+    background-color: #fff;
+  }
+
+  .latest-funding-rounds-hader-wrapper {
+    display: block;
+  }
+
+  .latest-funding-rounds-hader-wrapper ul {
+    display: block;
+  }
+
+  .latest-funding-rounds-hader-wrapper ul li {
+    border: none;
+    margin: 15px 0;
+  }
+
+  .latest-funding-rounds-hader-wrapper ul li a {
+    font-weight: lighter;
+    color: var(--color-red);
+  }
+
+  .showcase .showcase-main h1 {
+    font-size: 24px;
+  }
+}
+
+/*
+    ==============================================
+
+                ****** CATEGORIES  ******
+
+    ==============================================
+*/
+
+.categories-article-middle {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(255, 68, 34, 0.06);
+  align-items: center;
+}
+
+.categories-article-middle div:first-child {
+  padding: 0 15px;
+}
+
+.categories-article-middle .categories-article-image-wrapper {
+  min-width: 96px;
+  height: 96px;
+  width: 96px;
+}
+
+.categories-article-middle .categories-article-image-wrapper img {
+  width: 100%;
+}
+
+.categories-article-middle-description h5 {
+  font-weight: lighter;
+  font-size: larger;
+}
+
+.categroies-article-bottom li::before {
+  content: "• ";
+  color: red;
+  margin-right: 5px;
+}
+
+@media (max-width: 1023px) {
+  .grid-3-columns.categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .grid-3-columns.categories-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .footer-top ul li:not(:last-child) {
+    margin-right: 5px;
+  }
+}
+
+/*
+    ==============================================
+
+                ****** FOOTER  ******
+
+    ==============================================
+*/
+
+.footer-top {
+  background-color: #131313;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 42px 0;
+}
+
+.footer-top .social-icons {
+  margin-bottom: 21px;
+}
+
+.footer-top ul {
+  display: flex;
+}
+
+.footer-top ul:last-child a {
+  color: #aaa;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+@media (max-width: 1023px) {
+  .latest-funding-rounds .article {
+    width: 253px;
+  }
 }
